@@ -25,7 +25,7 @@ jobs:
         run: go install github.com/securego/gosec/v2/cmd/gosec@latest
 
       - name: Check gosec
-        run: gosec -quiet ./... | tee gosec-report.txt | gosec -fmt=json -out=gosec-report.json
+        run: gosec ./...
   
   style:
     name: Style
